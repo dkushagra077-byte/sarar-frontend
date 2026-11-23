@@ -1,4 +1,4 @@
-﻿# SARAR INDUSTRIES Frontend
+# SARAR INDUSTRIES Frontend
 
 React website frontend for SARAR INDUSTRIES, built with Webpack.
 
@@ -15,3 +15,6 @@ Run `npm ci` followed by `npm run build`. The output is written to `dist/`. Prod
 For a Render Static Site, use build command `npm ci && npm run build` and publish directory `dist`.
 
 Configure the backend's `FRONTEND_URL` and `CORS_ORIGINS` with the deployed website's origin so browsers can call the API.
+
+Production site URL: https://sarar-frontend.vercel.app/
+The production build connects to https://sarar-backend.onrender.com/api.

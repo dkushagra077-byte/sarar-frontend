@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://www.sararindustries.com/sitemap.xml
+Sitemap: https://sarar-frontend.vercel.app/sitemap.xml
