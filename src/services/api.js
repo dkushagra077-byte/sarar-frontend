@@ -37,7 +37,26 @@ class ApiClient {
         return blob;
       }
 
-      const data = await response.json();
+      if (response.status === 204) return null;
+
+      const responseText = await response.text();
+      let data = null;
+
+      if (responseText.trim()) {
+        try {
+          data = JSON.parse(responseText);
+        } catch (parseError) {
+          throw new Error(
+            response.ok
+              ? 'The server returned an invalid response. Please try again shortly.'
+              : `The server returned an invalid response (${response.status}). Please try again shortly.`
+          );
+        }
+      } else if (!response.ok) {
+        throw new Error(`The server returned an empty response (${response.status}). Please try again shortly.`);
+      } else {
+        throw new Error('The server returned an empty response. Please try again shortly.');
+      }
 
       if (!response.ok) {
         // If unauthorized, clear token
