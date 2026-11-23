@@ -18,3 +18,7 @@ Configure the backend's `FRONTEND_URL` and `CORS_ORIGINS` with the deployed webs
 
 Production site URL: https://sarar-frontend.vercel.app/
 The production build connects to https://sarar-backend.onrender.com/api.
+
+## Vercel deployment
+
+The included ercel.json sets the build output to dist and routes client-side paths to index.html for React Router.
